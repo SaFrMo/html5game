@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry:  [
-    path.resolve(__dirname, '../src/application.js') // arguments can be seen as being passed to `cd` and chained from left to right; see https://nodejs.org/api/path.html#path_path_resolve_from_to
+    path.resolve(__dirname, '../src/App.js') // arguments can be seen as being passed to `cd` and chained from left to right; see https://nodejs.org/api/path.html#path_path_resolve_from_to
   ],
   module: {
     loaders: [
@@ -19,9 +19,8 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, '../dist/built'),
-    publicPath: '/built/',
-    filename: 'js/bundle.js',
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'bundle.js',
     devtoolModuleFilenameTemplate: '[resource-path]' // copied from Mathias, see: https://webpack.github.io/docs/configuration.html#output-devtoolmodulefilenametemplate
   },
    resolve: {

@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const developmentConfig = {
   devServer: {
-    stats: 'errors-only',
+    stats: 'errors-only'
   },
   devtool: 'eval', // babel sourcemap setting, this is best for development but has no source maps - see https://webpack.github.io/docs/configuration.html#devtool alternative cheap-module-eval-source-map: has proper source maps in development
   entry: [

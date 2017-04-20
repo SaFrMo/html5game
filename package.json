@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist/built",
     "build": "npm run clean && webpack --config webpack/production.config.js",
-    "dev": "webpack-dev-server --port 3000 --config webpack/development.config.js --progress --colors --hot --content-base dist"
+    "dev": "webpack-dev-server --port 3000 --config webpack/development.config.js --progress --colors --hot --inline --content-base dist"
   },
   "keywords": [],
   "author": "",
