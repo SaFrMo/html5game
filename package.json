@@ -4,9 +4,23 @@
   "description": "Boilerplate for HTML5 games written in Phaser and ES6.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist/built",
+    "build": "npm run clean && webpack --config webpack/production.config.js",
+    "dev": "webpack-dev-server --port 3000 --config webpack/development.config.js --progress --colors --hot --content-base dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.0.15",
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-react": "^6.1.2",
+    "rimraf": "^2.5.0",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-merge": "^0.7.3"
+  }
 }
